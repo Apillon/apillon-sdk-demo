@@ -19,6 +19,7 @@ import { prepareEnv } from "./helpers";
     maxSupply: 100,
     isRevokable: false,
     isSoulbound: false,
+    isAutoIncrement: true,
     royaltiesAddress: "0x65266dbf8259968f54747bc83155238370d3808a",
     royaltiesFees: 1,
     drop: false,

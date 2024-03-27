@@ -9,7 +9,11 @@ import { EnvLevel, prepareEnv } from "./helpers";
   });
 
   const collection = await nft.collection(process.env.APILLON_COLLECTION);
-  await collection.mint("0x65266dbf8259968f54747bc83155238370d3808a", 1);
+  const res = await collection.mint({
+    receivingAddress: "0x65266dbf8259968f54747bc83155238370d3808a",
+    quantity: 1,
+  });
+  console.log("TransactionHash: ", res.transactionHash);
 })().catch(async (err) => {
   console.log(err);
 });
